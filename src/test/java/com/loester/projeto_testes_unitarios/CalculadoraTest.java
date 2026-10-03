@@ -88,6 +88,20 @@ class CalculadoraTest {
 	}	
 	
 	@Test
+	void deveLancarExceptionQuandoDividirPorZero() {
+
+	    // Arrange
+	    double num1 = 10;
+	    double num2 = 0;
+
+	    // Act
+	    // Assert
+	    // atenção usar apenas o : org.assertj	
+	    Assertions.assertThatThrownBy(() -> Calculadora.dividir(num1, num2))
+	            .isInstanceOf(ArithmeticException.class);
+	}
+	
+	@Test
 	void deveModQuandoValoresForemValidos() {
 
 	    // Arrange
