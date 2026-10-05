@@ -1,4 +1,4 @@
-package com.loester.projeto_testes_unitarios;
+package com.loester.projeto_testes_unitarios.calculadora;
 
 public class Calc {
 

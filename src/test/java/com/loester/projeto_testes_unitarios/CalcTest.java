@@ -3,6 +3,8 @@ package com.loester.projeto_testes_unitarios;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import com.loester.projeto_testes_unitarios.calculadora.Calc;
+
 // fazer todos tests primeiros
 class CalcTest {
 
