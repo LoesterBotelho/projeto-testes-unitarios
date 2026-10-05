@@ -4,6 +4,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.loester.projeto_testes_unitarios.calculadora.Comprimento;
+import com.loester.projeto_testes_unitarios.exception.NomeInvalidoException;
 
 class ComprimentarTest {
 
@@ -25,4 +26,19 @@ class ComprimentarTest {
 		// Implementar validação se for nullo e vazio
 		// pendente aqui
 	}
+	
+	@Test
+	void deveLancarExceptionQuandoNomeForNulo() {
+
+	    // Arrange
+	    String nome = null;
+
+	    // Act
+	    // Assert
+        // atenção usar apenas o : org.assertj	
+	    Assertions.assertThatThrownBy(() -> Comprimento.comprimentar(nome))
+	            .isInstanceOf(NomeInvalidoException.class)
+	            .hasMessage("O nome não pode ser nulo.");
+	}
+	
 }
