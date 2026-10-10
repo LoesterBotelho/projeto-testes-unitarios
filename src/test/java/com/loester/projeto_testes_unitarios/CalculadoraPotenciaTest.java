@@ -2,67 +2,71 @@ package com.loester.projeto_testes_unitarios;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.loester.projeto_testes_unitarios.calculadora.CalculadoraPotencia;
 
 class CalculadoraPotenciaTest {
 
-	@Test
-	void deveCalcularCorretamentePotencia() {
+    @Test
+    @DisplayName("Deve calcular corretamente a potência")
+    void deveCalcularCorretamentePotencia() {
 
-		// Arrange -> Arrumar
-		double base = 2;
-		double expoente = 3;
+        // Arrange -> Arrumar
+        double base = 2;
+        double expoente = 3;
 
-		// Act -> Agir
-		double resultado = CalculadoraPotencia.potencia(base, expoente);
+        // Act -> Agir
+        double resultado = CalculadoraPotencia.potencia(base, expoente);
 
-		// Assert -> Assegurar
-		assertThat(resultado)
-				.isEqualTo(8);
-	}
+        // Assert -> Assegurar
+        assertThat(resultado)
+                .isEqualTo(8);
+    }
 
-	@Test
-	void deveCalcularCorretamenteQuadrado() {
+    @Test
+    @DisplayName("Deve calcular corretamente o quadrado de um número")
+    void deveCalcularCorretamenteQuadrado() {
 
-		// Arrange -> Arrumar
-		double numero = 5;
+        // Arrange -> Arrumar
+        double numero = 5;
 
-		// Act -> Agir
-		double resultado = CalculadoraPotencia.quadrado(numero);
+        // Act -> Agir
+        double resultado = CalculadoraPotencia.quadrado(numero);
 
-		// Assert -> Assegurar
-		assertThat(resultado)
-				.isEqualTo(25);
-	}
+        // Assert -> Assegurar
+        assertThat(resultado)
+                .isEqualTo(25);
+    }
 
-	@Test
-	void deveCalcularCorretamenteCubo() {
+    @Test
+    @DisplayName("Deve calcular corretamente o cubo de um número")
+    void deveCalcularCorretamenteCubo() {
 
-		// Arrange -> Arrumar
-		double numero = 3;
+        // Arrange -> Arrumar
+        double numero = 3;
 
-		// Act -> Agir
-		double resultado = CalculadoraPotencia.cubo(numero);
+        // Act -> Agir
+        double resultado = CalculadoraPotencia.cubo(numero);
 
-		// Assert -> Assegurar
-		assertThat(resultado)
-				.isEqualTo(27);
-	}
+        // Assert -> Assegurar
+        assertThat(resultado)
+                .isEqualTo(27);
+    }
 
-	@Test
-	void deveCalcularCorretamenteExponencial() {
+    @Test
+    @DisplayName("Deve calcular corretamente a função exponencial")
+    void deveCalcularCorretamenteExponencial() {
 
-		// Arrange -> Arrumar
-		double numero = 1;
+        // Arrange -> Arrumar
+        double numero = 1;
 
-		// Act -> Agir
-		double resultado = CalculadoraPotencia.exponencial(numero);
+        // Act -> Agir
+        double resultado = CalculadoraPotencia.exponencial(numero);
 
-		// Assert -> Assegurar
-		assertThat(resultado)
-				.isEqualTo(Math.E);
-	}
-
+        // Assert -> Assegurar
+        assertThat(resultado)
+                .isEqualTo(Math.E);
+    }
 }
